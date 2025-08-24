@@ -2,8 +2,8 @@ import React, { useState } from 'react';
 import { Outlet, useNavigate, useLocation } from 'react-router-dom';
 import { 
   Container, 
-  Row, 
-  Col, 
+  //Row,
+ // Col,
   Navbar, 
   Nav, 
   Offcanvas, 

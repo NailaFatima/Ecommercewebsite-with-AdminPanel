@@ -10,7 +10,8 @@ import {
   ArrowUp,
   ArrowDown
 } from 'lucide-react';
-import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, BarChart, Bar } from 'recharts';
+import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer} from 'recharts';
+//import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, BarChart, Bar } from 'recharts';
 import { mockDashboardStats, mockSalesData, mockProducts, mockOrders } from '../../data/adminData';
 
 const AdminDashboard: React.FC = () => {

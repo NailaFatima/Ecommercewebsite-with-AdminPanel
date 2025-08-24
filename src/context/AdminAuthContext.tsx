@@ -65,6 +65,7 @@ export const AdminAuthProvider: React.FC<{ children: ReactNode }> = ({ children 
       try {
         const user = JSON.parse(userData);
         dispatch({ type: 'LOGIN_SUCCESS', payload: { user, token } });
+        // eslint-disable-next-line @typescript-eslint/no-unused-vars
       } catch (error) {
         localStorage.removeItem('admin_token');
         localStorage.removeItem('admin_user');
@@ -120,6 +121,7 @@ export const AdminAuthProvider: React.FC<{ children: ReactNode }> = ({ children 
         dispatch({ type: 'LOGIN_FAILURE' });
         return false;
       }
+      // eslint-disable-next-line @typescript-eslint/no-unused-vars
     } catch (error) {
       dispatch({ type: 'LOGIN_FAILURE' });
       return false;
