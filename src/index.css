@@ -1,0 +1,363 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom Styles */
+:root {
+  --primary-color: #1e40af;
+  --secondary-color: #14b8a6;
+  --accent-color: #f97316;
+  --success-color: #10b981;
+  --warning-color: #f59e0b;
+  --error-color: #ef4444;
+}
+
+/* Product Card Hover Effects */
+.product-card {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15) !important;
+}
+
+.product-image {
+  transition: transform 0.3s ease;
+}
+
+.product-card:hover .product-image {
+  transform: scale(1.05);
+}
+
+/* Size Badge Styling */
+.size-checkbox input[type="checkbox"] {
+  display: none;
+}
+
+.size-badge {
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.size-badge:hover {
+  transform: scale(1.1);
+}
+
+/* Custom Button Styles */
+.btn-primary {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+  transition: all 0.2s ease;
+}
+
+.btn-primary:hover {
+  background-color: #1e3a8a;
+  border-color: #1e3a8a;
+  transform: translateY(-1px);
+}
+
+.btn-outline-primary {
+  color: var(--primary-color);
+  border-color: var(--primary-color);
+}
+
+.btn-outline-primary:hover {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+}
+
+/* Form Controls */
+.form-control:focus {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 0.2rem rgba(30, 64, 175, 0.25);
+}
+
+.form-select:focus {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 0.2rem rgba(30, 64, 175, 0.25);
+}
+
+/* Navbar Styling */
+.navbar-brand {
+  font-size: 1.5rem !important;
+  font-weight: 700 !important;
+}
+
+.nav-link.active {
+  color: var(--primary-color) !important;
+  font-weight: 600 !important;
+}
+
+/* Card Improvements */
+.card {
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  transition: box-shadow 0.2s ease;
+}
+
+.card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Table Styling */
+.table th {
+  background-color: #f8f9fa;
+  border-top: none;
+  font-weight: 600;
+  color: #495057;
+}
+
+/* Responsive Images */
+.product-image-container {
+  position: relative;
+  overflow: hidden;
+}
+
+/* Animation Classes */
+.fade-in {
+  animation: fadeIn 0.5s ease-in;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Print Styles */
+@media print {
+  .d-print-none {
+    display: none !important;
+  }
+  
+  .card {
+    border: 1px solid #000 !important;
+  }
+  
+  body {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+}
+
+/* Loading States */
+.loading {
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+/* Badge Styling */
+.badge {
+  font-size: 0.75em;
+}
+
+/* Utility Classes */
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.cursor-zoom-in {
+  cursor: zoom-in;
+}
+
+.cursor-zoom-out {
+  cursor: zoom-out;
+}
+
+.object-fit-cover {
+  object-fit: cover;
+}
+
+.transition-transform {
+  transition: transform 0.3s ease;
+}
+
+.scale-150 {
+  transform: scale(1.5);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #a8a8a8;
+}
+
+/* Mobile Optimizations */
+@media (max-width: 768px) {
+  .product-card:hover {
+    transform: none;
+  }
+  
+  .container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  
+  .btn-lg {
+    font-size: 1rem;
+    padding: 0.75rem 1.5rem;
+  }
+}
+
+/* Focus States for Accessibility */
+.btn:focus,
+.form-control:focus,
+.form-select:focus {
+  outline: 2px solid var(--primary-color);
+  outline-offset: 2px;
+}
+
+/* High Contrast Mode Support */
+@media (prefers-contrast: high) {
+  .card {
+    border: 2px solid #000;
+  }
+  
+  .text-muted {
+    color: #333 !important;
+  }
+}
+
+/* Admin Panel Styles */
+.admin-layout {
+  min-height: 100vh;
+}
+
+.admin-login-page {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+/* Admin Sidebar */
+.admin-sidebar {
+  background-color: #f8f9fa;
+  border-right: 1px solid #dee2e6;
+}
+
+.admin-sidebar .nav-link {
+  color: #495057;
+  border-radius: 0.375rem;
+  margin-bottom: 0.25rem;
+  transition: all 0.2s ease;
+}
+
+.admin-sidebar .nav-link:hover {
+  background-color: #e9ecef;
+  color: #0d6efd;
+}
+
+.admin-sidebar .nav-link.active {
+  background-color: #0d6efd;
+  color: white;
+}
+
+/* Admin Cards */
+.admin-stat-card {
+  transition: transform 0.2s ease;
+}
+
+.admin-stat-card:hover {
+  transform: translateY(-2px);
+}
+
+/* Admin Tables */
+.admin-table th {
+  background-color: #f8f9fa;
+  border-top: none;
+  font-weight: 600;
+  color: #495057;
+  font-size: 0.875rem;
+}
+
+.admin-table td {
+  vertical-align: middle;
+  font-size: 0.875rem;
+}
+
+/* Admin Buttons */
+.admin-btn-sm {
+  padding: 0.25rem 0.5rem;
+  font-size: 0.75rem;
+}
+
+/* Admin Modal Improvements */
+.admin-modal .modal-header {
+  background-color: #f8f9fa;
+  border-bottom: 1px solid #dee2e6;
+}
+
+.admin-modal .modal-footer {
+  background-color: #f8f9fa;
+  border-top: 1px solid #dee2e6;
+}
+
+/* Admin Form Controls */
+.admin-form-control:focus {
+  border-color: #0d6efd;
+  box-shadow: 0 0 0 0.2rem rgba(13, 110, 253, 0.25);
+}
+
+/* Admin Dashboard Charts */
+.admin-chart-container {
+  background: white;
+  border-radius: 0.375rem;
+  padding: 1rem;
+}
+
+/* Admin Responsive */
+@media (max-width: 768px) {
+  .admin-layout .container-fluid {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  
+  .admin-table {
+    font-size: 0.75rem;
+  }
+  
+  .admin-btn-sm {
+    padding: 0.125rem 0.25rem;
+    font-size: 0.625rem;
+  }
+}
+
+/* Admin Loading States */
+.admin-loading {
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+/* Admin Status Badges */
+.admin-status-badge {
+  font-size: 0.75rem;
+  padding: 0.25rem 0.5rem;
+}
+
+/* Admin Notification Styles */
+.admin-notification {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  z-index: 1050;
+}
+
+/* Admin Print Styles */
+@media print {
+  .admin-no-print {
+    display: none !important;
+  }
+  
+  .admin-layout {
+    background: white !important;
+  }
+}
